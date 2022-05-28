@@ -1,0 +1,142 @@
+.header-wrapper{
+	z-index: 0;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+
+.cover{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -2;
+	background: black left top repeat;
+	background-image: url("./images/header-background.png");
+	background-repeat: no-repeat;  
+	background-position: 0% 0%;
+	background-size: 100% 100%;
+  	width: 100%;
+  	height: clamp(300px, 40vw, 1280px);
+
+}
+
+
+
+@keyframes animatedAvatarBorderStart {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+.middle-header-body-wrapper{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background: linear-gradient(black 20%, var(--main-color) 80%);
+	padding-bottom: 3vh;
+}
+
+
+.header-avatar-wrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+    border-radius: 50%;
+    width: 18vw;
+    height: 18vw;
+
+}
+
+.header-avatar-spin{
+	position: absolute;
+
+	border-radius: 50%;
+    width: 18vw;
+    height: 18vw;
+
+
+    background: linear-gradient( -180deg, var(--sub-color), var(--sub-color) 40%, var(--main-color) 40%, var(--main-color) 60%, var(--sub-color) 60% );
+    animation: animatedAvatarBorderStart 1s linear; 
+}
+
+
+.header-avatar-wrapper:hover .header-avatar-spin{
+	animation: spin 1s linear; 
+}
+
+
+
+.header-avatar{
+	background-color: var(--main-color);
+	z-index: 2;
+	width: 16vw;
+    height: 16vw;
+
+  	border-radius: 50%;
+ 
+}
+
+.header-contents{
+	display: flex;
+	z-index: 44444;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: var(--sub-color);
+	font-family: var(--header-font);
+	height: 100%;
+	font-size: 2vw;
+	padding-bottom: clamp(3vh,10vw,10vw);
+}
+
+.header-title{
+	letter-spacing: 15px;
+}
+
+
+
+.scale-characters:hover{
+	display: inline-block;
+	animation: spin 1s linear; 
+}
+
+
+
+.name-wrapper{
+	z-index: 1;
+	font-size: 2.8vw;
+	letter-spacing: 14px;
+	padding: 3vw;
+
+	/*background: linear-gradient(to top, var(--main-color) 50%, var(--sub-color) 50%);*/
+	background: var(--sub-color);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.graduated-title{
+	letter-spacing: 3px;
+}
