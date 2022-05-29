@@ -110,7 +110,7 @@
 
 @media only screen and (max-device-width: 800px) {
 	.work-exp-detail-wrapper {
-		flex-direction: row;
+		flex-direction: column;
 	} 
 }
 
