@@ -3,9 +3,9 @@ name: Super-linter
 on: push
 
 jobs:
-  super-lint:
-    name: Lint code base
-    runs-on: ubuntu-latest
+  build:
+    name: build
+    runs-on: self-hosted
     steps:
       - name: Checkout
         uses: actions/checkout@v2
